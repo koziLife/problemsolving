@@ -8,11 +8,12 @@ public class StringReverseIteration {
             return str;
         else{
             char[] chars = str.toCharArray();
-            int len = Math.floorDiv(chars.length, 2);
+            int length = chars.length;
+            int len = Math.floorDiv(length, 2);
             for (int i = 0; i < len; i++) {
                 char temp = chars[i];
-                chars[i] = chars[chars.length -1 -i];
-                chars[chars.length - 1 - i] = temp;
+                chars[i] = chars[length -1 -i];
+                chars[length - 1 - i] = temp;
             }
             return String.copyValueOf(chars);
         }
